@@ -72,7 +72,7 @@ Rectangle {
             Layout.preferredWidth: parent.height * 3
         }
 
-        // monero logo
+        // lozzax logo
         Item {
             Layout.fillWidth: true
             Layout.preferredHeight: parent.height

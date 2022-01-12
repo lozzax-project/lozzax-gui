@@ -132,14 +132,14 @@ function restoreWalletCheckViewSpendAddress(walletmanager, nettype, viewkey, spe
 //usage: getApproximateBlockchainHeight("March 18 2016") or getApproximateBlockchainHeight("2016-11-11")
 //returns estimated block height with 1 month buffer prior to requested date.
 function getApproximateBlockchainHeight(_date, _nettype){
-    // time of monero birth 2014-04-18 10:49:53 (1397818193)
-    var moneroBirthTime = _nettype == "Mainnet" ? 1397818193 : _nettype == "Testnet" ? 1410295020 : 1518932025;
+    // time of monero birth 2022-01-02 15:19:04 (1641136744)
+    var moneroBirthTime = _nettype == "Mainnet" ? 1641136744 : _nettype == "Testnet" ? 1410295020 : 1518932025;
     // avg seconds per block in v1
     var secondsPerBlockV1 = 60;
-    // time of v2 fork 2016-03-23 15:57:38 (1458748658)
-    var forkTime = _nettype == "Mainnet" ? 1458748658 : _nettype == "Testnet" ? 1448285909 : 1520937818;
+    // time of v2 fork 2022-01-02 15:35:35 (1641137735)
+    var forkTime = _nettype == "Mainnet" ? 1641137735 : _nettype == "Testnet" ? 1448285909 : 1520937818;
     // v2 fork block
-    var forkBlock = _nettype == "Mainnet" ? 1009827 : _nettype == "Testnet" ? 624634 : 32000;
+    var forkBlock = _nettype == "Mainnet" ? 1641138030 : _nettype == "Testnet" ? 624634 : 32000;
     // avg seconds per block in V2
     var secondsPerBlockV2 = 120;
     // time in UTC

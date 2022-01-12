@@ -739,7 +739,7 @@ Rectangle {
                                     font.pixelSize: 15
                                     text: {
                                         if(!isout && confirmationsRequired === 60) return qsTr("Yes") + translationManager.emptyString;
-                                        if(fee !== "") return Utils.removeTrailingZeros(fee) + " XMR";
+                                        if(fee !== "") return Utils.removeTrailingZeros(fee) + " LOZZ";
                                         return "-";
                                     }
 
@@ -1573,7 +1573,7 @@ Rectangle {
                 // has the correct amount, so we try to fetch it from that instead.
                 amount = Number(TxUtils.destinationsToAmount(destinations));
             }
-            var displayAmount = Utils.removeTrailingZeros(amount.toFixed(12)) + " XMR";
+            var displayAmount = Utils.removeTrailingZeros(amount.toFixed(12)) + " LOZZ";
 
             var tx_note = currentWallet.getUserNote(hash);
             var address = "";
@@ -1800,7 +1800,7 @@ Rectangle {
                 //date of the first transaction
                 fromDatePicker.currentDate = root.model.data(root.model.index((count - 1), 0), TransactionHistoryModel.TransactionDateRole);
             } else {
-                //date of monero birth (2014-04-18)
+                //date of lozzax birth (2022-01-02 15:19:04)
                 fromDatePicker.currentDate = model.transactionHistory.firstDateTime
             }
         }

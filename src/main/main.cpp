@@ -196,7 +196,7 @@ int main(int argc, char *argv[])
     // enable High DPI scaling
     qputenv("QT_ENABLE_HIGHDPI_SCALING", "1");
 
-    // Turn off colors in monerod log output.
+    // Turn off colors in lozzaxd log output.
     qputenv("TERM", "goaway");
 
 #if defined(Q_OS_MACOS)
@@ -218,15 +218,15 @@ int main(int argc, char *argv[])
     }
 #endif
 
-    app.setApplicationName("monero-core");
-    app.setOrganizationDomain("getmonero.org");
-    app.setOrganizationName("monero-project");
+    app.setApplicationName("lozzax-core");
+    app.setOrganizationDomain("lozzax.xyz");
+    app.setOrganizationName("lozzax-project");
 
     // Ask to enable Tails OS persistence mode, it affects:
     // - Log file location
-    // - QML Settings file location (monero-core.conf)
+    // - QML Settings file location (lozzax-core.conf)
     // - Default wallets path
-    // Target directory is: ~/Persistent/Monero
+    // Target directory is: ~/Persistent/Lozzax
     if (isTails) {
         if (!TailsOS::detectDataPersistence())
             TailsOS::showDataPersistenceDisabledWarning();
@@ -242,9 +242,9 @@ int main(int argc, char *argv[])
     #endif
 
     if(isTails && TailsOS::usePersistence){
-        moneroAccountsDir = QDir::homePath() + "/Persistent/Monero/wallets";
+        moneroAccountsDir = QDir::homePath() + "/Persistent/Lozzax/wallets";
     } else if (!moneroAccountsRootDir.empty()) {
-        moneroAccountsDir = moneroAccountsRootDir.at(0) + "/Monero/wallets";
+        moneroAccountsDir = moneroAccountsRootDir.at(0) + "/Lozzax/wallets";
     } else {
         qCritical() << "Error: accounts root directory could not be set";
         return 1;
@@ -487,7 +487,7 @@ Verify update binary using 'shasum'-compatible (SHA256 algo) output signed by tw
     if (accountName.isEmpty())
         accountName = qgetenv("USERNAME"); // Windows
     if (accountName.isEmpty())
-        accountName = "My monero Account";
+        accountName = "My lozzax Account";
 
     engine.rootContext()->setContextProperty("defaultAccountName", accountName);
     engine.rootContext()->setContextProperty("homePath", QDir::homePath());
