@@ -1,6 +1,7 @@
 # Lozzax GUI
 
 Copyright (c) 2021-2022, The Lozzax Project
+
 Copyright (c) 2014-2019, The Monero Project
 
 ## Table of Contents
